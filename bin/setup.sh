@@ -19,6 +19,14 @@ else
   echo '~/.bashrc linked!'
 fi
 
+if [ -L ~/.bash_profile.d ]
+then
+  echo '~/.bash_profile.d already exists.'
+else
+  ln -sf $SCRIPTS_ROOT/.bash_profile.d ~/.bash_profile.d
+  echo '~/.bash_profile.d linked!'
+fi
+
 source ~/.bash_profile
 
 if [ $(which brew) ]
