@@ -27,3 +27,13 @@ else
   ln -s $SCRIPTS_ROOT/.rbenv/default-gems ~/.rbenv/default-gems
   echo '~/.rbenv/default-gems linked!'
 fi
+
+rbenv install 2.5.0
+rbenv global 2.5.0
+
+pyenv install 3.6.4
+pyenv global 3.6.4
+pip install awscli
+
+nodebrew install v6.10.3
+nodebrew use v6.10.3
