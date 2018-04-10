@@ -8,9 +8,9 @@ then
   echo '~/.bash_profile already exists.'
 else
   ln -s $SCRIPTS_ROOT/.bash_profile ~/.bash_profile
-  source ~/.bash_profile
   echo '~/.bash_profile linked!'
 fi
+source ~/.bash_profile
 
 if [ ! $(which brew) ]
 then
