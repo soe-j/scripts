@@ -10,6 +10,15 @@ else
   ln -sf $SCRIPTS_ROOT/.bash_profile ~/.bash_profile
   echo '~/.bash_profile linked!'
 fi
+
+if [ -L ~/.bashrc ]
+then
+  echo '~/.bashrc already exists.'
+else
+  ln -sf $SCRIPTS_ROOT/.bashrc ~/.bashrc
+  echo '~/.bashrc linked!'
+fi
+
 source ~/.bash_profile
 
 if [ $(which brew) ]
