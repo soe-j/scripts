@@ -7,5 +7,6 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "explorer.sortOrder": "mixed"
+  "explorer.sortOrder": "mixed",
+  "workbench.startupEditor": "newUntitledFile"
 }
