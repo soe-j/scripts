@@ -30,12 +30,49 @@ else
   echo '~/.rbenv/default-gems linked!'
 fi
 
-rbenv install 2.5.0
-rbenv global 2.5.0
+rbenv versions | grep 2.5.0
+if [ $? -eq 0 ]
+then
+  echo "Ruby is already 2.5.0"
+else
+  rbenv install 2.5.0
+  rbenv global 2.5.0
+  source ~/.bash_profile
+fi
 
-pyenv install 3.6.4
-pyenv global 3.6.4
-pip install awscli
+pyenv versions | grep 3.6.4
+if [ $? -eq 0 ]
+then
+  echo "Python is already 3.6.4"
+else
+  pyenv install 3.6.4
+  pyenv global 3.6.4
+  source ~/.bash_profile
+fi
 
-nodebrew install v6.10.3
-nodebrew use v6.10.3
+if [ $(which aws) ]
+then
+  echo "awscli is already installed."
+else
+  pip install awscli
+fi
+
+if [ -d ~/.nodebrew ]
+then
+  echo "nodebrew is already setup."
+else
+  nodebrew setup_dirs
+  source ~/.bash_profile
+fi
+
+set +e
+nodebrew list | grep v6.10.3
+if [ $? -eq 0 ]
+then
+  echo "Node is already v6.10.3."
+else
+  echo 'hey'
+  nodebrew install v6.10.3
+  nodebrew use v6.10.3
+fi
+set -e
