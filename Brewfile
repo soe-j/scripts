@@ -2,6 +2,7 @@ cask_args appdir: "/Applications"
 
 brew "git"
 brew "rbenv"
+brew "rbenv-default-gems"
 brew "pyenv"
 brew "nodebrew"
 brew "yarn", args: ["without-node"]
