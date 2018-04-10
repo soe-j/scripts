@@ -3,11 +3,11 @@
 cd $(dirname $0)/..
 SCRIPTS_ROOT=$(pwd)
 
-if [ -f ~/.bash_profile ]
+if [ -L ~/.bash_profile ]
 then
   echo '~/.bash_profile already exists.'
 else
-  ln -s $SCRIPTS_ROOT/.bash_profile ~/.bash_profile
+  ln -sf $SCRIPTS_ROOT/.bash_profile ~/.bash_profile
   echo '~/.bash_profile linked!'
 fi
 source ~/.bash_profile
@@ -22,11 +22,11 @@ fi
 brew doctor
 brew bundle
 
-if [ -f ~/.rbenv/default-gems ]
+if [ -L ~/.rbenv/default-gems ]
 then
   echo '~/.rbenv/default-gems already exists.'
 else
-  ln -s $SCRIPTS_ROOT/.rbenv/default-gems ~/.rbenv/default-gems
+  ln -sf $SCRIPTS_ROOT/.rbenv/default-gems ~/.rbenv/default-gems
   echo '~/.rbenv/default-gems linked!'
 fi
 
