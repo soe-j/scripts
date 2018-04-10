@@ -12,9 +12,11 @@ else
 fi
 source ~/.bash_profile
 
-if [ ! $(which brew) ]
+if [ $(which brew) ]
 then
-   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  echo "brew is already installed."
+else
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 brew doctor
