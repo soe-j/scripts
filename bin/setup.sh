@@ -84,3 +84,11 @@ else
   nodebrew use v6.10.3
 fi
 set -e
+
+if [ -L ~/Library/Application\ Support/Code/User/settings.json ]
+then
+  echo "Code is already set."
+else
+  ln -sf $SCRIPTS_ROOT/Library/Application\ Support/Code/User/settings.json ~/Library/Application\ Support/Code/User/settings.json
+  echo "Code settings linked!"
+fi
