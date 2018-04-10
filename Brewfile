@@ -8,6 +8,7 @@ brew "yarn", args: ["without-node"]
 brew "jq"
 brew "postgresql"
 
+cask "slack"
 cask "google-chrome"
 cask "google-japanese-ime"
 cask "dash"
