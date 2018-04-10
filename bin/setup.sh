@@ -71,7 +71,6 @@ if [ $? -eq 0 ]
 then
   echo "Node is already v6.10.3."
 else
-  echo 'hey'
   nodebrew install v6.10.3
   nodebrew use v6.10.3
 fi
