@@ -17,6 +17,7 @@ cask "dash"
 cask "visual-studio-code"
 cask "gitkraken"
 cask "docker"
+cask "chefdk"
 
 # Calendar on Menu bar
 cask "day-o"
