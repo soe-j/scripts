@@ -8,6 +8,7 @@ brew "nodebrew"
 brew "yarn", args: ["without-node"]
 brew "jq"
 brew "postgresql"
+brew "packer"
 
 cask "slack"
 cask "google-chrome"
