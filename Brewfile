@@ -18,6 +18,7 @@ cask "visual-studio-code"
 cask "gitkraken"
 cask "docker"
 cask "chefdk"
+cask "caffeine"
 
 # Calendar on Menu bar
 cask "day-o"
