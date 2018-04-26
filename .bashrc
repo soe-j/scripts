@@ -9,3 +9,6 @@ alias git-delete-merged-branch='git branch --merged | egrep -v "(\*|master)" | x
 
 # Ruby
 alias be='bundle exec'
+
+# ssh-config completion
+source ~/scripts/completion.d/ssh-completion.bash
