@@ -19,6 +19,5 @@ cask "gitkraken"
 cask "docker"
 cask "chefdk"
 cask "caffeine"
-
-# Calendar on Menu bar
+cask "near-lock"
 cask "day-o"
