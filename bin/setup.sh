@@ -39,6 +39,16 @@ fi
 brew doctor
 brew bundle
 
+# git config
+git config --global core.excludesfile ~/.gitignore_global
+if [ -L ~/.gitignore_global ]
+then
+  echo '~/.gitignore_global already exists.'
+else
+  ln -sf $SCRIPTS_ROOT/.gitignore_global ~/.gitignore_global
+  echo '~/.gitignore_global linked!'
+fi
+
 if [ -L ~/.rbenv/default-gems ]
 then
   echo '~/.rbenv/default-gems already exists.'
