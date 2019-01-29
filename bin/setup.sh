@@ -49,6 +49,14 @@ else
   echo '~/.gitignore_global linked!'
 fi
 
+if [ -L ~/.gemrc ]
+then
+  echo '~/.gemrc already exists.'
+else
+  ln -sf $SCRIPTS_ROOT/.gemrc ~/.gemrc
+  echo '~/.gemrc linked!'
+fi
+
 if [ -L ~/.rbenv/default-gems ]
 then
   echo '~/.rbenv/default-gems already exists.'
