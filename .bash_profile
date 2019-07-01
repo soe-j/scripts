@@ -10,7 +10,7 @@ export PATH=$HOME/scripts/bin:$PATH
 
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+eval "$(nodenv init -)"
 
 if [ -f ~/.bashrc ]
 then
