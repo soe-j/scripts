@@ -80,3 +80,16 @@ else
   ln -sf $SCRIPTS_ROOT/workspace ~/workspace
   echo '~/workspace linked!'
 fi
+
+# screen capture settings
+if [ -L ~/Pictures/Screencapture ]
+then
+  echo '~/Pictures/Screencapture already exists.'
+else
+  ln -sf $SCRIPTS_ROOT/Pictures/Screencapture ~/Pictures/Screencapture
+  echo '~/Pictures/Screencapture linked!'
+fi
+
+defaults write com.apple.screencapture location ~/Pictures/Screencapture
+defaults write com.apple.screencapture disable-shadow -boolean true
+killall SystemUIServer
