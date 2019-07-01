@@ -5,7 +5,7 @@ brew "rbenv"
 brew "rbenv-default-gems"
 brew "pyenv"
 brew "nodebrew"
-brew "yarn", args: ["without-node"]
+brew "yarn", args: ["ignore-dependencies"]
 brew "jq"
 brew "postgresql"
 brew "packer"
