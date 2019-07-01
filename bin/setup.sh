@@ -118,3 +118,11 @@ else
   ln -sf $SCRIPTS_ROOT/Library/Application\ Support/Code/User/settings.json ~/Library/Application\ Support/Code/User/settings.json
   echo "Code settings linked!"
 fi
+
+if [ -L ~/workspace ]
+then
+  echo '~/workspace already exists.'
+else
+  ln -sf $SCRIPTS_ROOT/workspace ~/workspace
+  echo '~/workspace linked!'
+fi
