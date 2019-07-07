@@ -9,6 +9,7 @@ brew "nodenv"
 brew "yarn", args: ["ignore-dependencies"]
 brew "jq"
 brew "postgresql"
+brew "postgis"
 
 cask "google-chrome"
 cask "visual-studio-code"
