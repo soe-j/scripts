@@ -1,5 +1,6 @@
 cask_args appdir: "/Applications"
 
+brew "libxml2"  # nokogiri uses it
 brew "git"
 brew "rbenv"
 brew "rbenv-default-gems"
