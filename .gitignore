@@ -1,8 +1,0 @@
-/.bash_profile.d/*
-!/.bash_profile.d/README.md
-
-/workspace/*
-!/workspace/README.md
-
-/Pictures/Screencapture/*
-!/Pictures/Screencapture/README.md
