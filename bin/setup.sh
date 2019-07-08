@@ -75,7 +75,10 @@ fi
 
 cat $SCRIPTS_ROOT/vscode-extensions | while read line
 do
-  code --install-extension $line
+  if ! [[ $line =~ ^\#.*$ ]]
+  then
+    code --install-extension $line
+  fi
 done
 
 if [ -L ~/.config/karabiner/karabiner.json ]
