@@ -73,6 +73,11 @@ else
   echo "Code settings linked!"
 fi
 
+cat $SCRIPTS_ROOT/vscode-extensions | while read line
+do
+  code --install-extension $line
+done
+
 if [ -L ~/.config/karabiner/karabiner.json ]
 then
   echo "Karabiner is already set."
