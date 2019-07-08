@@ -1,5 +1,9 @@
 #!/bin/bash -eu
 
+
+####
+#### options
+####
 if [ $# = 1 ] && [ $1 = '-f' ]
 then
   FORCE_LINK=1
@@ -8,10 +12,17 @@ else
 fi
 
 
+####
+#### provisioning
+####
 cd $(dirname $0)/..
 SCRIPTS_ROOT=$(pwd)
 SOURCE_HOME=$SCRIPTS_ROOT/home
 
+
+####
+#### homebrew
+####
 if [ $(which brew) ]
 then
   echo "brew is already installed."
@@ -22,8 +33,16 @@ fi
 # brew doctor
 brew bundle
 
+
+####
+#### git settings
+####
 git config --global core.excludesfile ~/.gitignore_global
 
+
+####
+#### dotfiles and setting files
+####
 find $SOURCE_HOME -type f | while read SOURCE_FILE
 do
   TARGET_FILE="${HOME}${SOURCE_FILE#$SOURCE_HOME}"
@@ -46,6 +65,10 @@ done
 
 source ~/.bash_profile
 
+
+####
+#### directories
+####
 cat $SCRIPTS_ROOT/directories | while read dir
 do
   if [ -d ~/$dir ]
@@ -57,6 +80,10 @@ do
   fi
 done
 
+
+####
+#### vscode
+####
 cat $SCRIPTS_ROOT/vscode-extensions | while read extension
 do
   if ! [[ $extension =~ ^\#.*$ ]]
@@ -65,6 +92,10 @@ do
   fi
 done
 
+
+####
+#### os
+####
 defaults write com.apple.screencapture location ~/Pictures/Screencapture
 defaults write com.apple.screencapture disable-shadow -boolean true
 killall SystemUIServer
