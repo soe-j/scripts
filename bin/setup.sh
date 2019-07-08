@@ -36,7 +36,7 @@ else
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-brew doctor
+# brew doctor
 brew bundle
 
 # git config
@@ -71,6 +71,14 @@ then
 else
   ln -sf $SCRIPTS_ROOT/Library/Application\ Support/Code/User/settings.json ~/Library/Application\ Support/Code/User/settings.json
   echo "Code settings linked!"
+fi
+
+if [ -L ~/.config/karabiner/karabiner.json ]
+then
+  echo "Karabiner is already set."
+else
+  ln -sf $SCRIPTS_ROOT/.config/karabiner/karabiner.json ~/.config/karabiner/karabiner.json
+  echo "Karabiner settings linked!"
 fi
 
 if [ -L ~/workspace ]

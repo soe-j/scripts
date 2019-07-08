@@ -11,6 +11,7 @@ brew "jq"
 brew "postgresql"
 brew "postgis"
 
+cask "karabiner-elements"
 cask "google-chrome"
 cask "visual-studio-code"
 cask "gitup"
