@@ -83,22 +83,16 @@ else
   echo "Karabiner settings linked!"
 fi
 
-if [ -L ~/workspace ] && [ $FORCE_FLAG != 1 ]
-then
-  echo '~/workspace already exists.'
-else
-  ln -sf $SCRIPTS_ROOT/workspace ~/workspace
-  echo '~/workspace linked!'
-fi
-
-# screen capture settings
-if [ -L ~/Pictures/Screencapture ] && [ $FORCE_FLAG != 1 ]
-then
-  echo '~/Pictures/Screencapture already exists.'
-else
-  ln -sf $SCRIPTS_ROOT/Pictures/Screencapture ~/Pictures/Screencapture
-  echo '~/Pictures/Screencapture linked!'
-fi
+cat $SCRIPTS_ROOT/directories | while read line
+do
+  if [ -d ~/$line ]
+  then
+    echo "~/$line already exists."
+  else
+    mkdir ~/$line
+    echo "~/$line created!"
+  fi
+done
 
 defaults write com.apple.screencapture location ~/Pictures/Screencapture
 defaults write com.apple.screencapture disable-shadow -boolean true
