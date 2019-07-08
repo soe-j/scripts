@@ -68,11 +68,11 @@ else
   echo "Code settings linked!"
 fi
 
-cat $SCRIPTS_ROOT/vscode-extensions | while read line
+cat $SCRIPTS_ROOT/vscode-extensions | while read extension
 do
-  if ! [[ $line =~ ^\#.*$ ]]
+  if ! [[ $extension =~ ^\#.*$ ]]
   then
-    code --install-extension $line
+    code --install-extension $extension
   fi
 done
 
