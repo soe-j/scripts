@@ -84,14 +84,14 @@ else
   echo "Karabiner settings linked!"
 fi
 
-cat $SCRIPTS_ROOT/directories | while read line
+cat $SCRIPTS_ROOT/directories | while read dir
 do
-  if [ -d ~/$line ]
+  if [ -d ~/$dir ]
   then
-    echo "~/$line already exists."
+    echo "~/$dir already exists."
   else
-    mkdir ~/$line
-    echo "~/$line created!"
+    mkdir ~/$dir
+    echo "~/$dir created!"
   fi
 done
 
