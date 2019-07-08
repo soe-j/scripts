@@ -1,9 +1,19 @@
 #!/bin/bash -eu
 
-FORCE_FLAG=0
-
 cd $(dirname $0)/..
 SCRIPTS_ROOT=$(pwd)
+
+if [ $(which brew) ]
+then
+  echo "brew is already installed."
+else
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+# brew doctor
+brew bundle
+
+FORCE_FLAG=0
 
 if [ -L ~/.bash_profile ] && [ $FORCE_FLAG != 1 ]
 then
@@ -22,16 +32,6 @@ else
 fi
 
 source ~/.bash_profile
-
-if [ $(which brew) ]
-then
-  echo "brew is already installed."
-else
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
-# brew doctor
-brew bundle
 
 # git config
 git config --global core.excludesfile ~/.gitignore_global
