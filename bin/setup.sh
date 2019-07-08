@@ -46,14 +46,6 @@ done
 
 source ~/.bash_profile
 
-cat $SCRIPTS_ROOT/vscode-extensions | while read extension
-do
-  if ! [[ $extension =~ ^\#.*$ ]]
-  then
-    code --install-extension $extension
-  fi
-done
-
 cat $SCRIPTS_ROOT/directories | while read dir
 do
   if [ -d ~/$dir ]
@@ -62,6 +54,14 @@ do
   else
     mkdir ~/$dir
     echo "~/$dir created!"
+  fi
+done
+
+cat $SCRIPTS_ROOT/vscode-extensions | while read extension
+do
+  if ! [[ $extension =~ ^\#.*$ ]]
+  then
+    code --install-extension $extension
   fi
 done
 
