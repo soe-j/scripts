@@ -2,6 +2,7 @@
 
 cd $(dirname $0)/..
 SCRIPTS_ROOT=$(pwd)
+LINKED_HOME=$SCRIPTS_ROOT/home
 
 if [ $(which brew) ]
 then
@@ -19,7 +20,7 @@ if [ -L ~/.bash_profile ] && [ $FORCE_FLAG != 1 ]
 then
   echo '~/.bash_profile already exists.'
 else
-  ln -sf $SCRIPTS_ROOT/.bash_profile ~/.bash_profile
+  ln -sf $LINKED_HOME/.bash_profile ~/.bash_profile
   echo '~/.bash_profile linked!'
 fi
 
@@ -27,7 +28,7 @@ if [ -L ~/.bashrc ] && [ $FORCE_FLAG != 1 ]
 then
   echo '~/.bashrc already exists.'
 else
-  ln -sf $SCRIPTS_ROOT/.bashrc ~/.bashrc
+  ln -sf $LINKED_HOME/.bashrc ~/.bashrc
   echo '~/.bashrc linked!'
 fi
 
@@ -39,7 +40,7 @@ if [ -L ~/.gitignore_global ] && [ $FORCE_FLAG != 1 ]
 then
   echo '~/.gitignore_global already exists.'
 else
-  ln -sf $SCRIPTS_ROOT/.gitignore_global ~/.gitignore_global
+  ln -sf $LINKED_HOME/.gitignore_global ~/.gitignore_global
   echo '~/.gitignore_global linked!'
 fi
 
@@ -47,7 +48,7 @@ if [ -L ~/.gemrc ] && [ $FORCE_FLAG != 1 ]
 then
   echo '~/.gemrc already exists.'
 else
-  ln -sf $SCRIPTS_ROOT/.gemrc ~/.gemrc
+  ln -sf $LINKED_HOME/.gemrc ~/.gemrc
   echo '~/.gemrc linked!'
 fi
 
@@ -55,7 +56,7 @@ if [ -L ~/.rbenv/default-gems ] && [ $FORCE_FLAG != 1 ]
 then
   echo '~/.rbenv/default-gems already exists.'
 else
-  ln -sf $SCRIPTS_ROOT/.rbenv/default-gems ~/.rbenv/default-gems
+  ln -sf $LINKED_HOME/.rbenv/default-gems ~/.rbenv/default-gems
   echo '~/.rbenv/default-gems linked!'
 fi
 
@@ -63,7 +64,7 @@ if [ -L ~/Library/Application\ Support/Code/User/settings.json ] && [ $FORCE_FLA
 then
   echo "Code is already set."
 else
-  ln -sf $SCRIPTS_ROOT/Library/Application\ Support/Code/User/settings.json ~/Library/Application\ Support/Code/User/settings.json
+  ln -sf $LINKED_HOME/Library/Application\ Support/Code/User/settings.json ~/Library/Application\ Support/Code/User/settings.json
   echo "Code settings linked!"
 fi
 
@@ -79,7 +80,7 @@ if [ -L ~/.config/karabiner/karabiner.json ] && [ $FORCE_FLAG != 1 ]
 then
   echo "Karabiner is already set."
 else
-  ln -sf $SCRIPTS_ROOT/.config/karabiner/karabiner.json ~/.config/karabiner/karabiner.json
+  ln -sf $LINKED_HOME/.config/karabiner/karabiner.json ~/.config/karabiner/karabiner.json
   echo "Karabiner settings linked!"
 fi
 
