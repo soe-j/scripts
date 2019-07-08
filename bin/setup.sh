@@ -1,8 +1,16 @@
 #!/bin/bash -eu
 
+if [ $# = 1 ] && [ $1 = '-f' ]
+then
+  FORCE_LINK=1
+else
+  FORCE_LINK=0
+fi
+
+
 cd $(dirname $0)/..
 SCRIPTS_ROOT=$(pwd)
-LINKED_HOME=$SCRIPTS_ROOT/home
+SOURCE_HOME=$SCRIPTS_ROOT/home
 
 if [ $(which brew) ]
 then
@@ -14,59 +22,29 @@ fi
 # brew doctor
 brew bundle
 
-FORCE_FLAG=0
+git config --global core.excludesfile ~/.gitignore_global
 
-if [ -L ~/.bash_profile ] && [ $FORCE_FLAG != 1 ]
-then
-  echo '~/.bash_profile already exists.'
-else
-  ln -sf $LINKED_HOME/.bash_profile ~/.bash_profile
-  echo '~/.bash_profile linked!'
-fi
+find $SOURCE_HOME -type f | while read SOURCE_FILE
+do
+  TARGET_FILE="${HOME}${SOURCE_FILE#$SOURCE_HOME}"
 
-if [ -L ~/.bashrc ] && [ $FORCE_FLAG != 1 ]
-then
-  echo '~/.bashrc already exists.'
-else
-  ln -sf $LINKED_HOME/.bashrc ~/.bashrc
-  echo '~/.bashrc linked!'
-fi
+  if [ $FORCE_LINK = 1 ]
+  then
+    ln -sf "$SOURCE_FILE" "$TARGET_FILE"
+    echo "$TARGET_FILE is force linked!"
+  else
+
+    if [ -L "$TARGET_FILE" ]
+    then
+      echo "$TARGET_FILE is already exists."
+    else
+      ln -s "$SOURCE_FILE" "$TARGET_FILE"
+      echo "$TARGET_FILE is linked!"
+    fi
+  fi
+done
 
 source ~/.bash_profile
-
-# git config
-git config --global core.excludesfile ~/.gitignore_global
-if [ -L ~/.gitignore_global ] && [ $FORCE_FLAG != 1 ]
-then
-  echo '~/.gitignore_global already exists.'
-else
-  ln -sf $LINKED_HOME/.gitignore_global ~/.gitignore_global
-  echo '~/.gitignore_global linked!'
-fi
-
-if [ -L ~/.gemrc ] && [ $FORCE_FLAG != 1 ]
-then
-  echo '~/.gemrc already exists.'
-else
-  ln -sf $LINKED_HOME/.gemrc ~/.gemrc
-  echo '~/.gemrc linked!'
-fi
-
-if [ -L ~/.rbenv/default-gems ] && [ $FORCE_FLAG != 1 ]
-then
-  echo '~/.rbenv/default-gems already exists.'
-else
-  ln -sf $LINKED_HOME/.rbenv/default-gems ~/.rbenv/default-gems
-  echo '~/.rbenv/default-gems linked!'
-fi
-
-if [ -L ~/Library/Application\ Support/Code/User/settings.json ] && [ $FORCE_FLAG != 1 ]
-then
-  echo "Code is already set."
-else
-  ln -sf $LINKED_HOME/Library/Application\ Support/Code/User/settings.json ~/Library/Application\ Support/Code/User/settings.json
-  echo "Code settings linked!"
-fi
 
 cat $SCRIPTS_ROOT/vscode-extensions | while read extension
 do
@@ -75,14 +53,6 @@ do
     code --install-extension $extension
   fi
 done
-
-if [ -L ~/.config/karabiner/karabiner.json ] && [ $FORCE_FLAG != 1 ]
-then
-  echo "Karabiner is already set."
-else
-  ln -sf $LINKED_HOME/.config/karabiner/karabiner.json ~/.config/karabiner/karabiner.json
-  echo "Karabiner settings linked!"
-fi
 
 cat $SCRIPTS_ROOT/directories | while read dir
 do
