@@ -1,9 +1,11 @@
 #!/bin/bash -eu
 
+FORCE_FLAG=0
+
 cd $(dirname $0)/..
 SCRIPTS_ROOT=$(pwd)
 
-if [ -L ~/.bash_profile ]
+if [ -L ~/.bash_profile ] && [ $FORCE_FLAG != 1 ]
 then
   echo '~/.bash_profile already exists.'
 else
@@ -11,7 +13,7 @@ else
   echo '~/.bash_profile linked!'
 fi
 
-if [ -L ~/.bashrc ]
+if [ -L ~/.bashrc ] && [ $FORCE_FLAG != 1 ]
 then
   echo '~/.bashrc already exists.'
 else
@@ -19,7 +21,7 @@ else
   echo '~/.bashrc linked!'
 fi
 
-if [ -L ~/.bash_profile.d ]
+if [ -L ~/.bash_profile.d ] && [ $FORCE_FLAG != 1 ]
 then
   echo '~/.bash_profile.d already exists.'
 else
@@ -41,7 +43,7 @@ brew bundle
 
 # git config
 git config --global core.excludesfile ~/.gitignore_global
-if [ -L ~/.gitignore_global ]
+if [ -L ~/.gitignore_global ] && [ $FORCE_FLAG != 1 ]
 then
   echo '~/.gitignore_global already exists.'
 else
@@ -49,7 +51,7 @@ else
   echo '~/.gitignore_global linked!'
 fi
 
-if [ -L ~/.gemrc ]
+if [ -L ~/.gemrc ] && [ $FORCE_FLAG != 1 ]
 then
   echo '~/.gemrc already exists.'
 else
@@ -57,7 +59,7 @@ else
   echo '~/.gemrc linked!'
 fi
 
-if [ -L ~/.rbenv/default-gems ]
+if [ -L ~/.rbenv/default-gems ] && [ $FORCE_FLAG != 1 ]
 then
   echo '~/.rbenv/default-gems already exists.'
 else
@@ -65,7 +67,7 @@ else
   echo '~/.rbenv/default-gems linked!'
 fi
 
-if [ -L ~/Library/Application\ Support/Code/User/settings.json ]
+if [ -L ~/Library/Application\ Support/Code/User/settings.json ] && [ $FORCE_FLAG != 1 ]
 then
   echo "Code is already set."
 else
@@ -81,7 +83,7 @@ do
   fi
 done
 
-if [ -L ~/.config/karabiner/karabiner.json ]
+if [ -L ~/.config/karabiner/karabiner.json ] && [ $FORCE_FLAG != 1 ]
 then
   echo "Karabiner is already set."
 else
@@ -89,7 +91,7 @@ else
   echo "Karabiner settings linked!"
 fi
 
-if [ -L ~/workspace ]
+if [ -L ~/workspace ] && [ $FORCE_FLAG != 1 ]
 then
   echo '~/workspace already exists.'
 else
@@ -98,7 +100,7 @@ else
 fi
 
 # screen capture settings
-if [ -L ~/Pictures/Screencapture ]
+if [ -L ~/Pictures/Screencapture ] && [ $FORCE_FLAG != 1 ]
 then
   echo '~/Pictures/Screencapture already exists.'
 else
