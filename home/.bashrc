@@ -1,5 +1,6 @@
 # General
 alias ll='ls -la'
+alias gdiff='git diff --no-index'
 alias chrome='open -a "Google Chrome.app"'
 alias safari='open -a "safari.app"'
 
@@ -9,4 +10,3 @@ alias git-delete-merged-branch='git branch --merged | egrep -v "(\*|master)" | x
 
 # Ruby
 alias be='bundle exec'
-
