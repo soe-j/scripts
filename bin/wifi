@@ -20,7 +20,15 @@ case $1 in
   'set' )
     cat $CONFIG_FILE | while read CONFIG
     do
-      networksetup -setairportnetwork en0 $(echo $CONFIG | tr ',' ' ')
+      ARR=(`echo $CONFIG | tr ',' ' '`)
+      RESULT=$(networksetup -setairportnetwork en0 ${ARR[0]} ${ARR[1]})
+      if [ "$RESULT" = "" ] # NO ERROR
+      then
+        echo "connect ${ARR[0]}"
+        exit 0
+      else
+        echo "$RESULT"
+      fi
     done
     ;;
 esac
