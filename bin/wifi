@@ -1,0 +1,26 @@
+#!/bin/bash -eu
+
+CONFIG_FILE=$(dirname $0)/../config/wifi.csv
+
+if [ $# != 1 ]
+then
+  echo 'wifi [on|off|set]'
+  exit 1
+fi
+
+case $1 in
+  'off' )
+    networksetup -setairportpower en0 off
+    ;;
+
+  'on' )
+    networksetup -setairportpower en0 on
+    ;;
+
+  'set' )
+    cat $CONFIG_FILE | while read CONFIG
+    do
+      networksetup -setairportnetwork en0 $(echo $CONFIG | tr ',' ' ')
+    done
+    ;;
+esac
