@@ -9,7 +9,8 @@ $ bin/setup.sh
 ~~~
 
 ## /config
-### /config/wifi
+### /config/wifi.csv
+sort of priority
 ~~~csv
 ssid1,pass1
 ssid2,pass2
