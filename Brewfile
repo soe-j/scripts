@@ -11,12 +11,16 @@ brew "jq"
 brew "postgresql"
 brew "postgis"
 
-cask "karabiner-elements"
 cask "google-chrome"
 cask "visual-studio-code"
 cask "gitup"
 cask "docker"
-cask "caffeine"
-cask "day-o"
+
+cask "google-japanese-ime"
+
+cask "karabiner-elements"
 cask "kopypasta"
 cask "witch"
+
+cask "caffeine"
+cask "day-o"
