@@ -1,0 +1,43 @@
+#!/bin/bash -eu
+
+function disp_config () {
+  local RESULT=$(readlink ~/.aws)
+  echo ${RESULT#"~/Documents/dotfiles-secrets/.aws-"}
+}
+
+function set_config () {
+  local CONFIG_NAME=$1
+
+  if [ -L ~/.aws ]
+  then
+    rm ~/.aws
+  fi
+
+  ln -s "~/Documents/dotfiles-secrets/.aws-$CONFIG_NAME" ~/.aws
+}
+
+function disp_funclist () {
+  echo 'function : [config]'
+}
+
+########## MAIN ##########
+if [ $# -eq 0 ]
+then
+  disp_funclist
+  exit 1
+fi
+
+case $1 in
+  config )
+    if [ $# -eq 1 ]
+    then
+      disp_config
+    else
+      set_config $2
+    fi
+    ;;
+
+  * )
+    disp_funclist
+    ;;
+esac
