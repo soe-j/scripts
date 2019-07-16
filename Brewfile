@@ -4,12 +4,12 @@ brew "libxml2"  # nokogiri uses it
 brew "git"
 brew "rbenv"
 brew "rbenv-default-gems"
-brew "pyenv"
 brew "nodenv"
 brew "yarn", args: ["ignore-dependencies"]
 brew "jq"
 brew "postgresql"
 brew "postgis"
+brew "awscli"
 
 cask "google-chrome"
 cask "visual-studio-code"
