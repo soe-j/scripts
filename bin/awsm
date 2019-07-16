@@ -1,19 +1,25 @@
 #!/bin/bash -eu
 
+AWS_CONFIG_PATH="$HOME/.aws"
+AWS_CONFIG_ORIGIN_PREFIX="$HOME/Documents/dotfiles-secrets/.aws-"
+
 function disp_config () {
-  local RESULT=$(readlink ~/.aws)
-  echo ${RESULT#"~/Documents/dotfiles-secrets/.aws-"}
+  local RESULT=$(readlink $HOME/.aws)
+  echo ${RESULT#"$AWS_CONFIG_ORIGIN_PREFIX"}
 }
 
 function set_config () {
   local CONFIG_NAME=$1
 
-  if [ -L ~/.aws ]
+  # check existence
+  ls "$AWS_CONFIG_ORIGIN_PREFIX$CONFIG_NAME"
+
+  if [ -L $AWS_CONFIG_PATH ]
   then
-    rm ~/.aws
+    rm $AWS_CONFIG_PATH
   fi
 
-  ln -s "~/Documents/dotfiles-secrets/.aws-$CONFIG_NAME" ~/.aws
+  ln -s "$AWS_CONFIG_ORIGIN_PREFIX$CONFIG_NAME" $AWS_CONFIG_PATH
 }
 
 function disp_funclist () {
