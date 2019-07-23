@@ -21,6 +21,7 @@ cask "google-japanese-ime"
 cask "karabiner-elements"
 cask "kopypasta"
 cask "witch"
+cask "spectacle"
 
 cask "caffeine"
 cask "day-o"
