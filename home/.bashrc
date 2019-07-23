@@ -6,7 +6,8 @@ alias safari='open -a "safari.app"'
 
 # Git
 source /usr/local/opt/git/etc/bash_completion.d/git-completion.bash
-alias git-delete-merged-branch='git branch --merged | egrep -v "(\*|master)" | xargs git branch -d'
+alias git-branch-default='git remote show origin | grep "HEAD branch" | sed "s/.*: //"'
+alias git-branch-delete-merged='git branch --merged | egrep -v "(\*|$(git-branch-default))" | xargs git branch -d'
 
 # Ruby
 alias be='bundle exec'
