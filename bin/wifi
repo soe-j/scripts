@@ -17,6 +17,10 @@ case $1 in
     networksetup -setairportpower en0 on
     ;;
 
+  'config' )
+    cat $CONFIG_FILE
+    ;;
+
   'set' )
     if ! [ -f $CONFIG_FILE ]
     then
