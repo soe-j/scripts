@@ -55,9 +55,20 @@ do
 
     if [ -L "$TARGET_FILE" ]
     then
-      echo "$TARGET_FILE is already exists."
+      echo "$TARGET_FILE is already linked!"
     else
-      ln -s "$SOURCE_FILE" "$TARGET_FILE"
+      if [ -f "$TARGET_FILE" ]
+      then
+        echo "$TARGET_FILE is already exists."
+        #### TODO all skipping bug ####
+        # read -p "overwrite? (y/N) " yn
+        # case "$yn" in y) ;; *) continue ;; esac
+
+        cp -f "$TARGET_FILE" "$SOURCE_FILE"
+        ln -sf "$SOURCE_FILE" "$TARGET_FILE"
+      else
+        ln -s "$SOURCE_FILE" "$TARGET_FILE"
+      fi
       echo "$TARGET_FILE is linked!"
     fi
   fi
