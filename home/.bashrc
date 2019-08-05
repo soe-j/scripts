@@ -1,5 +1,6 @@
 # General
 alias ll='ls -la'
+alias grep='grep -v grep | grep'
 alias gdiff='git diff --no-index'
 alias chrome='open -a "Google Chrome.app"'
 alias safari='open -a "safari.app"'
