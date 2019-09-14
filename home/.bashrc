@@ -13,3 +13,6 @@ alias git-branch-delete-merged='git branch --merged | egrep -v "(\*|$(git-branch
 
 # Ruby
 alias be='bundle exec'
+
+# AWS
+complete -C $(which aws_completer) aws
