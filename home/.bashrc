@@ -10,6 +10,7 @@ source /usr/local/opt/git/etc/bash_completion.d/git-completion.bash
 alias gf='git fetch -p'
 alias git-branch-default='git remote show origin | grep "HEAD branch" | sed "s/.*: //"'
 alias git-branch-delete-merged='git branch --merged | egrep -v "(\*|$(git-branch-default))" | xargs git branch -d'
+alias git-reg='gf && git add . && git stash && git checkout master && git merge origin/master && git-branch-delete-merged && git stash pop'
 
 # Ruby
 alias be='bundle exec'
