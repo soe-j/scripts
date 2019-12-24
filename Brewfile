@@ -18,6 +18,11 @@ cask "docker"
 
 cask "google-japanese-ime"
 
+cask "QLStephen"
+cask "QLColorCode"
+cask "QLMarkdown"
+cask "quicklook-json"
+
 cask "karabiner-elements"
 cask "kopypasta"
 cask "witch"
