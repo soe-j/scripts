@@ -14,5 +14,9 @@
   "editor.formatOnPaste": true,
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "indentRainbow.colors": [
+    "rgba(255,255,255,0.07)",
+    "rgba(255,255,255,0.14)"
+  ],
   "keyboard.dispatch": "keyCode"
 }
