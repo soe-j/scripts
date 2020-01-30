@@ -109,4 +109,5 @@ done
 ####
 defaults write com.apple.screencapture location ~/Pictures/Screencapture
 defaults write com.apple.screencapture disable-shadow -boolean true
+defaults write com.apple.screencapture show-thumbnail -bool FALSE
 killall SystemUIServer
