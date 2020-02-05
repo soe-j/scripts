@@ -1,4 +1,4 @@
-#!/bin/bash -eu
+#!/bin/zsh -eu
 
 AWS_CONFIG_PATH="$HOME/.aws"
 AWS_CONFIG_ORIGIN_PREFIX="$HOME/Documents/dotfiles-secrets/.aws-"

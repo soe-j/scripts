@@ -1,4 +1,4 @@
-#!/bin/bash -eu
+#!/bin/zsh -eu
 
 CONFIG_FILE=~/Documents/dotfiles-secrets/wifi.csv
 

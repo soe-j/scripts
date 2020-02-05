@@ -9,7 +9,7 @@ ssh-add -K
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
 
-if [ -f ~/.bashrc ]
+if [ -f ~/.zshrc ]
 then
-  source ~/.bashrc
+  source ~/.zshrc
 fi

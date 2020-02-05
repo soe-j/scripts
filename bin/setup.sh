@@ -1,4 +1,4 @@
-#!/bin/bash -eu
+#!/bin/zsh -eu
 
 
 ####
@@ -93,7 +93,7 @@ do
   fi
 done
 
-source ~/.bash_profile
+source ~/.zsh_profile
 
 
 ####

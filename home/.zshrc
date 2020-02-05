@@ -6,7 +6,6 @@ alias chrome='open -a "Google Chrome.app"'
 alias safari='open -a "safari.app"'
 
 # Git
-source /usr/local/opt/git/etc/bash_completion.d/git-completion.bash
 alias gf='git fetch -p'
 alias git-branch-default='git remote show origin | grep "HEAD branch" | sed "s/.*: //"'
 alias git-branch-delete-merged='git branch --merged | egrep -v "(\*|$(git-branch-default))" | xargs git branch -d'
@@ -15,6 +14,3 @@ alias git-open-diff-file='code $(git diff `git show-branch --merge-base master H
 
 # Ruby
 alias be='bundle exec'
-
-# AWS
-complete -C $(which aws_completer) aws
