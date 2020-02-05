@@ -1,3 +1,8 @@
 workspace
 playspace
 Pictures/Screencapture
+.config
+.config/karabiner
+.rbenv
+.bundle
+Library/Application\ Support/Spectacle
