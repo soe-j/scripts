@@ -1,4 +1,12 @@
 # General
+# completion
+fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+
+autoload -U compinit
+compinit -u
+
+
+# aliases
 alias ll='ls -la'
 alias grep='grep -v grep | grep'
 alias gdiff='git diff --no-index'
