@@ -41,6 +41,25 @@ git config --global core.excludesfile ~/.gitignore_global
 
 
 ####
+#### directories
+####
+OLDIFS=$IFS
+IFS=$'\n'
+cat $SCRIPTS_ROOT/directories | while read dir
+do
+  echo ~/$dir
+  if [ -d ~/$dir ]
+  then
+    echo "~/$dir already exists."
+  else
+    mkdir ~/$dir
+    echo "~/$dir created!"
+  fi
+done
+IFS=$OLDIFS
+
+
+####
 #### dotfiles and setting files
 ####
 find $SOURCE_HOME -type f | while read SOURCE_FILE
@@ -75,21 +94,6 @@ do
 done
 
 source ~/.bash_profile
-
-
-####
-#### directories
-####
-cat $SCRIPTS_ROOT/directories | while read dir
-do
-  if [ -d ~/$dir ]
-  then
-    echo "~/$dir already exists."
-  else
-    mkdir ~/$dir
-    echo "~/$dir created!"
-  fi
-done
 
 
 ####
