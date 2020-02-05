@@ -113,7 +113,6 @@ done
 ####
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock magnification -bool true
-defaults write com.apple.dock tilesize -int 128
 defaults write com.apple.dock largesize -int 128
 killall Dock
 
