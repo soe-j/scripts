@@ -1,4 +1,7 @@
 # homebrew
+PROMPT='
+%K{blue} %* %k%F{black}%K{white} %. %k%f %% '
+
 export PATH=/usr/local/sbin:$PATH
 
 export PATH=$HOME/.dotfiles/bin:$PATH
