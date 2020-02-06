@@ -17,6 +17,7 @@ cask "gitup"
 cask "docker"
 
 cask "google-japanese-ime"
+cask "zoomus"
 
 cask "QLStephen"
 cask "QLColorCode"
