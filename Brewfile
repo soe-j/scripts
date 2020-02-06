@@ -25,7 +25,7 @@ cask "QLMarkdown"
 cask "quicklook-json"
 
 cask "karabiner-elements"
-cask "kopypasta"
+cask "clipy"
 cask "witch"
 cask "spectacle"
 
