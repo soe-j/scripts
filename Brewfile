@@ -1,5 +1,7 @@
 cask_args appdir: "/Applications"
 
+tap "homebrew/cask-fonts"
+
 brew "libxml2"  # nokogiri uses it
 brew "git"
 brew "rbenv"
@@ -31,3 +33,5 @@ cask "spectacle"
 
 cask "caffeine"
 cask "day-o"
+
+cask "font-source-han-code-jp"
