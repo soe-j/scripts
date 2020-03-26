@@ -11,7 +11,6 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.formatOnPaste": true,
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "indentRainbow.colors": [
