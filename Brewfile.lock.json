@@ -318,6 +318,20 @@
             "appdir": "/Applications"
           }
         }
+      },
+      "font-source-han-code-jp": {
+        "version": "2.011",
+        "options": {
+          "full_name": "font-source-han-code-jp",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      }
+    },
+    "tap": {
+      "homebrew/cask-fonts": {
+        "revision": "3a00503da565f42c1ac9b16825ac9484fd540ba3"
       }
     }
   },
