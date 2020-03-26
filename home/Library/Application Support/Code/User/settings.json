@@ -21,5 +21,6 @@
     "rgba(255,255,255,0.12)"
   ],
   "keyboard.dispatch": "keyCode",
-  "editor.fontFamily": "Source Han Code JP, Menlo, Monaco, 'Courier New', monospace"
+  "editor.fontFamily": "Source Han Code JP, Menlo, Monaco, 'Courier New', monospace",
+  "debug.node.autoAttach": "on"
 }
