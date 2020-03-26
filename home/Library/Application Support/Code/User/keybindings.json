@@ -70,4 +70,8 @@
     "command": "-cursorLineEnd",
     "when": "textInputFocus"
   },
+  {
+    "key": "ctrl+cmd+j",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
 ]
