@@ -2,9 +2,10 @@
 
 console.log();
 console.log(
-  decodeURIComponent(
-    process.argv[2]
-  ).replace(/　/g, '%E3%80%80')
-  .replace(/ /g, '%20')
+  decodeURIComponent(process.argv[2])
+    .replace(/　/g, '%E3%80%80')
+    .replace(/ /g, '%20')
+    .replace(/（/g, '(')
+    .replace(/）/g, ')')
 );
 console.log();
