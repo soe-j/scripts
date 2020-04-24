@@ -9,6 +9,7 @@ brew "rbenv-default-gems"
 brew "nodenv"
 brew "yarn", args: ["ignore-dependencies"]
 brew "jq"
+brew "httpie"
 brew "postgresql"
 brew "postgis"
 brew "awscli"
