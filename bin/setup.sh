@@ -27,7 +27,7 @@ if [ $(which brew) ]
 then
   echo "brew is already installed."
 else
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
 brew doctor
