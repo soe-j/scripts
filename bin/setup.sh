@@ -93,7 +93,7 @@ do
   fi
 done
 
-source ~/.zsh_profile
+source ~/.zshrc
 
 
 ####
