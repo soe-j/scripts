@@ -2,7 +2,7 @@
 ~~~zsh
 $ xcode-select --install
 
-$ ssh-keygen [awesome options]
+$ ssh-keygen -t ed25519
 
 $ git config --global user.name "soe-j"
 $ git config --global user.email "xxxxxxx+soe-j@users.noreply.github.com"
