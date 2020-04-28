@@ -7,6 +7,7 @@ brew "libxml2"  # nokogiri uses it
 brew "git"
 
 brew "rbenv"
+brew "rbenv-default-gems"
 brew "nodenv"
 brew "goenv"
 

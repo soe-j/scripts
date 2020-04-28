@@ -76,6 +76,10 @@
           }
         }
       },
+      "rbenv-default-gems": {
+        "version": "1.0.0_1",
+        "bottle": false
+      },
       "nodenv": {
         "version": "1.3.2",
         "bottle": false
@@ -313,7 +317,7 @@
       "catalina": {
         "HOMEBREW_VERSION": "2.2.14",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "148a2165d3a35af13f676ef2db7dce9cf8a545ea",
+        "Homebrew/homebrew-core": "3b097e26ab92471c3cd80d5d4a61b616c3c75913",
         "CLT": "1103.0.32.59",
         "Xcode": "11.4.1",
         "macOS": "10.15.4"
