@@ -7,8 +7,6 @@ brew "git"
 brew "anyenv"
 brew "jq"
 brew "httpie"
-brew "postgresql"
-brew "postgis"
 brew "awscli"
 
 cask "google-chrome"
