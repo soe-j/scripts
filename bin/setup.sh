@@ -62,8 +62,6 @@ else
   anyenv install goenv
 fi
 
-exec $SHELL -l
-
 
 ####
 #### git settings
