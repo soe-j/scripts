@@ -1,5 +1,5 @@
 # .dotfiles
-~~~
+~~~zsh
 $ xcode-select --install
 
 $ ssh-keygen [awesome options]
