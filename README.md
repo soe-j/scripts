@@ -18,8 +18,8 @@ $ **env [install|global] [version]
 $ aws configure
 ~~~
 
-## /config
-### /config/wifi.csv
+## private settings
+### ~/Documents/dotfiles-secrets/wifi.csv
 sort of priority
 ~~~csv
 ssid1,pass1
