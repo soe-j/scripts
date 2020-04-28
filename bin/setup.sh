@@ -44,21 +44,21 @@ else
   anyenv install --init
 fi
 
-if [ $(which rbenv) ]
+if [ -d ~/.anyenv/envs/rbenv ]
 then
   echo "rbenv already installed."
 else
   anyenv install rbenv
 fi
 
-if [ $(which nodenv) ]
+if [ -d ~/.anyenv/envs/nodenv ]
 then
   echo "nodenv already installed."
 else
   anyenv install nodenv
 fi
 
-if [ $(which goenv) ]
+if [ -d ~/.anyenv/envs/goenv ]
 then
   echo "goenv already installed."
 else
