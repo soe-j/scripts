@@ -55,6 +55,13 @@ else
   anyenv install nodenv
 fi
 
+if [ $(which goenv) ]
+then
+  echo "goenv already installed."
+else
+  anyenv install goenv
+fi
+
 exec $SHELL -l
 
 
