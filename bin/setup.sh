@@ -41,6 +41,22 @@ else
   anyenv install --init
 fi
 
+if [ $(which rbenv) ]
+then
+  echo "rbenv already installed."
+else
+  anyenv install rbenv
+fi
+
+if [ $(which nodenv) ]
+then
+  echo "nodenv already installed."
+else
+  anyenv install nodenv
+fi
+
+exec $SHELL -l
+
 
 ####
 #### git settings

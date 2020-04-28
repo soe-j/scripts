@@ -7,8 +7,6 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=$HOME/.dotfiles/bin:$PATH
 ssh-add -K
 
-eval "$(rbenv init -)"
-eval "$(nodenv init -)"
 eval "$(anyenv init -)"
 
 # completion
