@@ -1095,6 +1095,14 @@
                     "to": {
                         "key_code": "right_control"
                     }
+                },
+                {
+                    "from": {
+                        "key_code": "fn"
+                    },
+                    "to": {
+                        "key_code": "escape"
+                    }
                 }
             ],
             "virtual_hid_keyboard": {
