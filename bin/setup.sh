@@ -34,6 +34,9 @@ brew doctor
 brew bundle
 
 
+####
+#### anyenv
+####
 if [ -d ~/.config/anyenv/anyenv-install ]
 then
   echo "anyenv is already setup."
