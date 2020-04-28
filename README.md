@@ -10,6 +10,12 @@ $ git config --global user.email "xxxxxxx+soe-j@users.noreply.github.com"
 $ git clone git@github.com:soe-j/.dotfiles.git
 $ cd .dotfiles
 $ bin/setup.sh
+
+# install language
+$ **env [install|global] [version]
+
+# setup aws
+$ aws configure
 ~~~
 
 ## /config
