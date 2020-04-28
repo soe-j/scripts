@@ -37,6 +37,7 @@ $ brew bundle
 #### remove
 ~~~zsh
 (remove 'brew "ng-formula"' from ./Brewfile)
+$ brew bundle cleanup # check removed packages
 $ brew bundle cleanup --force
 
 # update lock file
