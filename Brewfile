@@ -5,7 +5,6 @@ tap "homebrew/cask-fonts"
 
 brew "libxml2"  # nokogiri uses it
 brew "git"
-brew "anyenv"
 
 brew "rbenv"
 brew "nodenv"
