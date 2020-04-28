@@ -34,6 +34,14 @@ brew doctor
 brew bundle
 
 
+if [ -f ~/.config/anyenv/anyenv-install ]
+then
+  echo "anyenv is already setup."
+else
+  anyenv install --init
+fi
+
+
 ####
 #### git settings
 ####
