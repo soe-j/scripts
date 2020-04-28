@@ -129,15 +129,9 @@ source ~/.zshrc
 
 
 ####
-#### vscode
+#### vscode settings sync
 ####
-cat $SCRIPTS_ROOT/vscode-extensions | while read extension
-do
-  if ! [[ $extension =~ ^\#.*$ ]]
-  then
-    code --install-extension $extension
-  fi
-done
+code --install-extension Shan.code-settings-sync
 
 
 ####
