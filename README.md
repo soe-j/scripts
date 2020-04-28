@@ -25,3 +25,21 @@ sort of priority
 ssid1,pass1
 ssid2,pass2
 ~~~
+
+## maintenance
+### homebrew
+#### add formula
+~~~zsh
+(add 'brew "great-formula"' to ./Brewfile)
+$ brew bundle
+~~~
+
+#### remove
+~~~zsh
+(remove 'brew "ng-formula"' from ./Brewfile)
+$ brew bundle cleanup --force
+
+# update lock file
+$ rm ./Brewfile.lock
+$ brew bundle
+~~~
