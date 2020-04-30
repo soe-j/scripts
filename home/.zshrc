@@ -4,6 +4,7 @@ PROMPT='
 export PATH=$HOME/.dotfiles/bin:$PATH
 ssh-add -K
 
+eval "$(rbenv init -)"
 
 # completion
 fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
