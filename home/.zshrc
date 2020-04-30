@@ -5,6 +5,7 @@ export PATH=$HOME/.dotfiles/bin:$PATH
 ssh-add -K
 
 eval "$(rbenv init -)"
+eval "$(nodenv init -)"
 
 # completion
 fpath=($(brew --prefix)/share/zsh/site-functions $fpath)

@@ -4,5 +4,6 @@ Pictures/Screencapture
 .config
 .config/karabiner
 .rbenv
+.nodenv
 .bundle
 Library/Application\ Support/Spectacle
