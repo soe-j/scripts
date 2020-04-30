@@ -6,6 +6,7 @@ ssh-add -K
 
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
+eval "$(goenv init -)"
 
 # completion
 fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
