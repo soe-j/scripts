@@ -35,38 +35,6 @@ brew bundle
 
 
 ####
-#### anyenv
-####
-if [ -d ~/.config/anyenv/anyenv-install ]
-then
-  echo "anyenv is already setup."
-else
-  anyenv install --init
-fi
-
-if [ -d ~/.anyenv/envs/rbenv ]
-then
-  echo "rbenv already installed."
-else
-  anyenv install rbenv
-fi
-
-if [ -d ~/.anyenv/envs/nodenv ]
-then
-  echo "nodenv already installed."
-else
-  anyenv install nodenv
-fi
-
-if [ -d ~/.anyenv/envs/goenv ]
-then
-  echo "goenv already installed."
-else
-  anyenv install goenv
-fi
-
-
-####
 #### git settings
 ####
 git config --global core.excludesfile ~/.gitignore_global

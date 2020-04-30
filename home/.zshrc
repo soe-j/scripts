@@ -4,7 +4,6 @@ PROMPT='
 export PATH=$HOME/.dotfiles/bin:$PATH
 ssh-add -K
 
-eval "$(anyenv init -)"
 
 # completion
 fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
