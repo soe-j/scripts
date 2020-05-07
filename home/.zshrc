@@ -14,6 +14,7 @@ fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 autoload -U compinit
 compinit -u
 
+mkcd () { mkdir $1; cd $1 }
 
 # aliases
 alias ll='ls -la'
