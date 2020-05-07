@@ -1,5 +1,5 @@
 PROMPT='
-%K{blue} %* %k%F{black}%K{white} %. %k%f %% '
+%K{blue}%*%k %F{black}%K{white}%.%k%f %% '
 
 export PATH=$HOME/.dotfiles/bin:$PATH
 ssh-add -K
