@@ -11,6 +11,7 @@ brew "rbenv-default-gems"
 brew "nodenv"
 brew "goenv"
 
+brew "tree"
 brew "jq"
 brew "httpie"
 brew "awscli"
