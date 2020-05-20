@@ -32,7 +32,7 @@ cask "quicklook-json"
 cask "karabiner-elements"
 cask "clipy"
 cask "witch"
-cask "spectacle"
+cask "rectangle"
 
 cask "caffeine"
 cask "day-o"
