@@ -33,6 +33,7 @@ cask "karabiner-elements"
 cask "clipy"
 cask "witch"
 cask "rectangle"
+cask "sharemouse"
 
 cask "caffeine"
 cask "day-o"
