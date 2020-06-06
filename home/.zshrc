@@ -8,6 +8,8 @@ eval "$(rbenv init -)"
 eval "$(nodenv init -)"
 eval "$(goenv init -)"
 
+export WORDCHARS='*?_.[]~=&;!#$%^(){}<>'
+
 # completion
 fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 
