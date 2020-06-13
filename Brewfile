@@ -2,6 +2,7 @@ cask_args appdir: "/Applications"
 
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
+tap "heroku/brew"
 
 brew "libxml2"  # nokogiri uses it
 brew "git"
@@ -14,7 +15,9 @@ brew "goenv"
 brew "tree"
 brew "jq"
 brew "httpie"
+
 brew "awscli"
+brew "heroku"
 
 cask "google-chrome"
 cask "visual-studio-code"
