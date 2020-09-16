@@ -22,6 +22,7 @@ brew "heroku"
 cask "google-chrome"
 cask "visual-studio-code"
 cask "gitup"
+cask "tableplus"
 cask "docker"
 
 cask "google-japanese-ime"
