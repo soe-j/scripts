@@ -1,0 +1,19 @@
+#!/bin/bash -eu
+
+if [ $# != 1 ]
+then
+  echo 'vpn [on|off]'
+  exit 1
+fi
+
+NETWORK_NAME=$(networksetup -listallnetworkservices | grep VPN)
+
+case $1 in
+  'off' )
+    networksetup -disconnectpppoeservice $NETWORK_NAME
+    ;;
+
+  'on' )
+    networksetup -connectpppoeservice $NETWORK_NAME
+    ;;
+esac
