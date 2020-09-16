@@ -40,5 +40,6 @@ cask "sharemouse"
 
 cask "caffeine"
 cask "day-o"
+cask "michaelvillar-timer"
 
 cask "font-source-han-code-jp"
