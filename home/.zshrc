@@ -1,7 +1,6 @@
 PROMPT='
 %K{blue}%*%k %F{black}%K{white}%.%k%f %% '
 
-export PATH=$HOME/.dotfiles/bin:$PATH
 ssh-add -K
 
 eval "$(rbenv init -)"
@@ -9,6 +8,8 @@ eval "$(nodenv init -)"
 eval "$(goenv init -)"
 
 export WORDCHARS='*?_.[]~=&;!#$%^(){}<>'
+export PATH=$GOPATH/.dotfiles/bin:$PATH
+export PATH=$HOME/.dotfiles/bin:$PATH
 
 # completion
 fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
