@@ -39,6 +39,7 @@ cask "witch"
 cask "rectangle"
 cask "sharemouse"
 
+cask "licecap"
 cask "caffeine"
 cask "day-o"
 cask "michaelvillar-timer"
