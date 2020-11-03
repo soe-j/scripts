@@ -14,6 +14,10 @@ brew "nodenv"
 brew "nodenv/nodenv/nodenv-default-packages"
 brew "goenv"
 
+# plantuml
+brew "openjdk"
+brew "graphviz"
+
 brew "tree"
 brew "jq"
 brew "httpie"
