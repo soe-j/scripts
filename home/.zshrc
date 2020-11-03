@@ -30,6 +30,7 @@ alias safari='open -a "safari.app"'
 ## Git
 alias gf='git fetch -p'
 alias gr='git reset'
+alias gc='git checkout'
 alias gl='git log --oneline --graph --decorate'
 alias git-branch-default='git remote show origin | grep "HEAD branch" | sed "s/.*: //"'
 alias git-branch-delete-merged='git branch --merged | egrep -v "(\*|$(git-branch-default))" | xargs git branch -d'
