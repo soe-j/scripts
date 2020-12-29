@@ -24,7 +24,7 @@ cask "visual-studio-code"
 cask "gitup"
 cask "jasper"
 
-cask "tableplus"
+cask "sequel-ace"
 cask "docker"
 
 cask "google-japanese-ime"
