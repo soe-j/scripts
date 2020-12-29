@@ -28,7 +28,7 @@ cask "sequel-ace"
 cask "docker"
 
 cask "google-japanese-ime"
-cask "zoomus"
+cask "zoom"
 
 cask "QLStephen"
 cask "QLColorCode"
