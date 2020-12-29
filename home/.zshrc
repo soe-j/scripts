@@ -40,3 +40,5 @@ alias git-open-diff-file='code $(git diff `git show-branch --merge-base $(git-br
 
 ## Ruby
 alias be='bundle exec'
+
+source ~/Documents/dotfiles-secrets/.zshrc-secrets
