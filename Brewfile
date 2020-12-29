@@ -17,6 +17,8 @@ brew "jq"
 brew "httpie"
 
 brew "awscli"
+
+brew "heroku-node"
 brew "heroku"
 
 cask "google-chrome"
