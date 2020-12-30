@@ -24,7 +24,7 @@ brew "jq"
 brew "httpie"
 
 brew "awscli"
-
+brew "sops"
 brew "heroku-node"
 brew "heroku"
 brew "circleci"
