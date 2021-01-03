@@ -3,6 +3,7 @@ cask_args appdir: "/Applications"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "heroku/brew"
+tap "homebrew/cask-drivers"
 
 brew "libxml2"  # nokogiri uses it
 brew "git"
@@ -39,6 +40,7 @@ cask "QLColorCode"
 cask "QLMarkdown"
 cask "quicklook-json"
 
+cask "qmk-toolbox"
 cask "karabiner-elements"
 cask "clipy"
 cask "witch"
