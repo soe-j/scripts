@@ -21,6 +21,7 @@ brew "awscli"
 
 brew "heroku-node"
 brew "heroku"
+brew "circleci"
 
 cask "google-chrome"
 cask "visual-studio-code"
