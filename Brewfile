@@ -11,6 +11,7 @@ brew "git"
 brew "rbenv"
 brew "rbenv-default-gems"
 brew "nodenv"
+brew "nodenv/nodenv/nodenv-default-packages"
 brew "goenv"
 
 brew "tree"
