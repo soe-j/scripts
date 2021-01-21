@@ -29,6 +29,7 @@ cask "jasper"
 cask "sequel-ace"
 cask "docker"
 cask "flutter"
+cask "android-studio"
 
 cask "google-japanese-ime"
 cask "zoom"
