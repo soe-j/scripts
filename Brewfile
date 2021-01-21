@@ -28,6 +28,7 @@ cask "jasper"
 
 cask "sequel-ace"
 cask "docker"
+cask "flutter"
 
 cask "google-japanese-ime"
 cask "zoom"
