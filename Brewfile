@@ -25,6 +25,8 @@ brew "heroku"
 brew "circleci"
 
 cask "google-chrome"
+cask "figma"
+
 cask "visual-studio-code"
 cask "gitup"
 cask "jasper"
