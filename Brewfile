@@ -4,6 +4,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "heroku/brew"
 tap "homebrew/cask-drivers"
+tap "nodenv/nodenv"
 
 brew "libxml2"  # nokogiri uses it
 brew "git"
